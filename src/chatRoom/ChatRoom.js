@@ -3,14 +3,14 @@ import {
   ScrollView,
   StyleSheet, Text, View,
 } from 'react-native';
-import Header from './Header';
+import SubHeader from '../SubHeader';
 import MyMessageList from './MyMessageList';
 import YourMessageList from './YourMessageList';
 import IC_voice_new from '../../assets/images/ic_voice_new.svg';
 const ChatRoom = () => {
   return (
     <View style={styles.main}>
-        <Header style={styles.header} name={'Pizza guy'}/>
+        <SubHeader style={styles.header} name={'Pizza guy'} icon={true}/>
         <ScrollView style={{height: '80%'}}>
           <MyMessageList/>
           <YourMessageList />

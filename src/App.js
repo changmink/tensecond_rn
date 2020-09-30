@@ -10,13 +10,11 @@ import React from 'react';
 import {
   StyleSheet,
 } from 'react-native';
-import Chats from './chats/Chats';
-import ChatRoom from './chatRoom/ChatRoom';
-import Friends from './friends/Friends'
+import Profile from './profile/Profile';
 
 const App = () => {
   return (
-    <Friends/>
+    <Profile/>
   );
 };
 
