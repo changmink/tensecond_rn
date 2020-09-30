@@ -12,10 +12,11 @@ import {
 } from 'react-native';
 import Chats from './chats/Chats';
 import ChatRoom from './chatRoom/ChatRoom';
+import Friends from './friends/Friends'
 
 const App = () => {
   return (
-    <ChatRoom/>
+    <Friends/>
   );
 };
 
