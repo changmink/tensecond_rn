@@ -11,10 +11,11 @@ import {
   StyleSheet,
 } from 'react-native';
 import Chats from './chats/Chats';
+import ChatRoom from './chatRoom/ChatRoom';
 
 const App = () => {
   return (
-    <Chats/>
+    <ChatRoom/>
   );
 };
 
