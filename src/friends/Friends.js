@@ -19,7 +19,7 @@ const Friends = ({navigation, route}) => {
                     <Image style={styles.profile} source={profile? {uri: profile.profileImage} : profile_img}/>
                     <Text style={{fontSize: 18}}>{profile ? profile.name : 'NoName'}</Text>
                     <Text style={{fontSize: 16}}>{profile ? profile.profileMessage : "ㅅ"}</Text>
-                    <FriendList/>
+                    <FriendList userId={profile? profile.id : -1}/>
                 </View>
             </ScrollView>
       </View>

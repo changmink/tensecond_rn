@@ -7,7 +7,7 @@ import {
 import IC_voice_new from '../../assets/images/ic_voice_new.svg';
 import profile_img from '../../assets/images/profile.png';
 
-const Friend = ({image, name, state}) => {
+const Friend = ({id, name, pic, message}) => {
   return (
       <View style={styles.mainView}>
         <Image
@@ -16,10 +16,10 @@ const Friend = ({image, name, state}) => {
         />
         <View style={styles.profile}>
             <Text>
-            friend
+            {name? name : 'friend'}
             </Text>
             <Text>
-                do you like pizza?
+                {message? message : 'How are you?'}
             </Text>
         </View>
        <View style={styles.new}>
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
         borderRadius:1,
     },  
     profile:{
-        justifyContent: 'center'
+        justifyContent: 'center',
     },
     new : {
         backgroundColor: '#0fe1a3', 
