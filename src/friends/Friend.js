@@ -5,14 +5,14 @@ import {
   Text, Image
 } from 'react-native';
 import IC_voice_new from '../../assets/images/ic_voice_new.svg';
-import profile from '../../assets/images/profile.png';
+import profile_img from '../../assets/images/profile.png';
 
 const Friend = ({image, name, state}) => {
   return (
       <View style={styles.mainView}>
         <Image
             style={styles.image}
-            source={profile}
+            source={profile_img}
         />
         <View style={styles.profile}>
             <Text>

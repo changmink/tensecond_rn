@@ -20,6 +20,7 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		9EFA31A33F3FDDC3C14F05BD /* libPods-tensecond_rn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 751FD7FA397322986D6460B0 /* libPods-tensecond_rn.a */; };
 		A14ECF04149ADA9D5364EAD8 /* libPods-tensecond_rn-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E3C26E11C5E06FEB375C98 /* libPods-tensecond_rn-tvOSTests.a */; };
+		CE94F2DC2531909600DA323F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE94F2DB2531909600DA323F /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		93E067A6F58C58D1BDD57B44 /* Pods-tensecond_rn-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tensecond_rn-tvOS.release.xcconfig"; path = "Target Support Files/Pods-tensecond_rn-tvOS/Pods-tensecond_rn-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		AB6AECB0CF2D3A3D029F2725 /* libPods-tensecond_rn-tensecond_rnTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tensecond_rn-tensecond_rnTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E3C26E11C5E06FEB375C98 /* libPods-tensecond_rn-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tensecond_rn-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE94F2DB2531909600DA323F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DEBD040699D25C53B67129F4 /* Pods-tensecond_rn-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tensecond_rn-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-tensecond_rn-tvOS/Pods-tensecond_rn-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -159,6 +161,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				CE94F2DB2531909600DA323F /* Default-568h@2x.png */,
 				13B07FAE1A68108700A75B9A /* tensecond_rn */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* tensecond_rnTests */,
@@ -194,7 +197,6 @@
 				7AFF1A78D9A2AE46B9774CC8 /* Pods-tensecond_rn-tvOSTests.debug.xcconfig */,
 				78522265FEB8A6E2EC9140AC /* Pods-tensecond_rn-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -342,6 +344,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				CE94F2DC2531909600DA323F /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,10 +445,12 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-tensecond_rn-tensecond_rnTests/Pods-tensecond_rn-tensecond_rnTests-resources.sh",
+				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FacebookSDKStrings.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,10 +465,12 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-tensecond_rn/Pods-tensecond_rn-resources.sh",
+				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FacebookSDKStrings.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

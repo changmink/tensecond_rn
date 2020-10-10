@@ -6,17 +6,19 @@ import {
 } from 'react-native';
 import Header from '../Header';
 import FriendList from './FriendList';
-import profile from '../../assets/images/profile.png';
+import profile_img from '../../assets/images/profile.png';
 
-const Friends = () => {
+const Friends = ({navigation, route}) => {
+  const { profile } = route.params;
+  console.log('profile', profile)
   return (
       <View style={styles.mainView}>
             <Header name={'친구목록'}/>
             <ScrollView >
                 <View style={styles.subView}>
-                    <Image style={styles.profile} source={profile}/>
-                    <Text style={{fontSize: 18}}>Changmin</Text>
-                    <Text style={{fontSize: 16}}> I like pizza</Text>
+                    <Image style={styles.profile} source={profile? {uri: profile.profileImage} : profile_img}/>
+                    <Text style={{fontSize: 18}}>{profile ? profile.name : 'NoName'}</Text>
+                    <Text style={{fontSize: 16}}>{profile ? profile.profileMessage : "ㅅ"}</Text>
                     <FriendList/>
                 </View>
             </ScrollView>

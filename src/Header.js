@@ -17,7 +17,31 @@ import IC_setting from '../assets/images/ic_setting.svg'
 import IC_search from '../assets/images/ic_search.svg'
 import IC_plus from '../assets/images/ic_plus.svg'
 
+import {
+  LoginButton,
+  AccessToken,
+  GraphRequest,
+  GraphRequestManager,
+  } from 'react-native-fbsdk'
+
 const Header = ({name}) => {
+  const FBLogout = (accessToken) => {
+    let logout =
+        new GraphRequest(
+            "me/permissions/",
+            {
+                accessToken: accessToken,
+                httpMethod: 'DELETE'
+            },
+            (error, result) => {
+                if (error) {
+                    console.log('Error fetching data: ' + error.toString());
+                } else {
+                    LoginManager.logOut();
+                }
+            });
+    new GraphRequestManager().addRequest(logout).start();
+  };
   return (
     <View style={styles.main}>
       <Text style={styles.title}>{name}</Text>
