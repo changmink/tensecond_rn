@@ -6,7 +6,7 @@ import {
   Text
 } from 'react-native';
 import Friend from './Friend';
-isloading = true;
+
 const FriendList = ({userId}) => {
   
   const [friends, setFriends] = useState([])
@@ -15,25 +15,17 @@ const FriendList = ({userId}) => {
         method: 'GET',
     }).then((response) => response.json())
     .then((json) => {
-      console.log('json', json)
       setFriends(json)
-      console.log('friends', friends)
     })
     .catch((error) => {
       console.error(error);
     });
   }
 
-  if (isloading) {
-    getFriends(userId)
-    isloading = false
-  } 
   useEffect(()=>{
     getFriends(userId)
-  },[userId])  
+  },[])  
 
-  
- 
   return (
       <View>
           <Text>내 친구 목록({friends ? friends.length: 0})</Text>
