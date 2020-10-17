@@ -19,6 +19,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import LoginScreen from './screen/LoginScreen';
 import MainScreen from './screen/MainScreen';
 import Profile from './profile/Profile';
+import ChatRoom from './chatRoom/ChatRoom';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -30,6 +31,7 @@ const App = () => {
         <Stack.Screen name="Login" component={LoginScreen}/>
         <Stack.Screen name="Main" component={MainScreen}/>
         <Stack.Screen name="Profile" component={Profile}/>
+        <Stack.Screen name="Chat" component={ChatRoom}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

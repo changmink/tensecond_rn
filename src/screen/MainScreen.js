@@ -14,7 +14,7 @@ const MainScreen = ({route}) => {
   return (
       <Tab.Navigator>
         <Tab.Screen name="Friends" component={Friends} initialParams={{profile: profileInfo.json}}/>
-        <Tab.Screen name="Chats" component={Chats}/>
+        <Tab.Screen name="Chats" component={Chats} initialParams={{profile: profileInfo.json}}/>
       </Tab.Navigator>
   );
 };

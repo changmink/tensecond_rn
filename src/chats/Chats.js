@@ -12,18 +12,20 @@ import {
   View,
 } from 'react-native';
 import Header from '../Header'
-import MessageList from './MessageList';
+import ChatList from './ChatList';
 
 
-const Chats = () => {
+const Chats = ({navigation, route}) => {
+  console.log(route.params.profile.id)
   return (
     <View style={styles.mainView}>
       <Header 
         style={styles.header}
         name={"채팅"}
       />
-      <MessageList
+      <ChatList
         style={styles.messageList}
+        userId={route.params.profile.id}
       />
     </View>
   );

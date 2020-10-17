@@ -6,7 +6,7 @@ import {
   Image,
 } from 'react-native';
 
-const Message = ({profile, name, length, time, count}) => {
+const Chat = ({profile, name, length, time, count}) => {
   return (
     <View style={styles.main}>
         <Image
@@ -69,4 +69,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default Message;
+export default Chat;
